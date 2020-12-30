@@ -14,6 +14,8 @@ class TRectangle():
         return  self.a*self.b
     def perimetr(self):
         return 2*self.a+2*self.b
+    def __eq__(self, other):
+        return self.area == other.area
     def __add__(self, other_side):
         return TRectangle(self.a+other_side.a, self.b+other_side.b)
     def __sub__(self, other_side):
